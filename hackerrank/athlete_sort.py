@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+@created: 08.11.19
+@author: felix
+"""
+
+import math
+import os
+import random
+import re
+import sys
+
+
+if __name__ == '__main__':
+    nm = input().split()
+
+    n = int(nm[0])
+
+    m = int(nm[1])
+
+    arr = []
+
+    for _ in range(n):
+        arr.append(list(map(int, input().rstrip().split())))
+
+    k = int(input())
+
+    arr.sort(key=lambda y: y[k])
+    for row in arr:
+        x = [str(c) for c in row]
+        print(f'{" ".join(x)}')
